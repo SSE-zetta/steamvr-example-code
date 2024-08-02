@@ -40,7 +40,7 @@ namespace Valve.VR.InteractionSystem.Sample
             hoveringText = textMeshs[1];
 
             generalText.text = "";
-            hoveringText.text = ""	;
+            hoveringText.text = "";
 
             interactable = this.GetComponent<Interactable>();
 
