@@ -22,7 +22,7 @@ namespace Valve.VR.InteractionSystem.Sample
 		private Quaternion oldRotation;
 
 		//add Game Object here
-        
+        	public GameObject toggleObject;
         
 
         private bool PlayerInZone;      // checking if player is in zone
@@ -40,7 +40,7 @@ namespace Valve.VR.InteractionSystem.Sample
             hoveringText = textMeshs[1];
 
             generalText.text = "";
-            hoveringText.text = ""	;
+            hoveringText.text = "";
 
             interactable = this.GetComponent<Interactable>();
 
@@ -83,7 +83,14 @@ namespace Valve.VR.InteractionSystem.Sample
                 oldRotation = transform.rotation;
 
                 // Add Toggle Object script here
-
+		if (toggleObject.activeSelf == false)
+		{
+			toggleObject.SetActive(true);
+		}
+		else
+		{
+			toggleObject.SetActive(false);
+		}
                 
             }
             else if (isGrabEnding)
